@@ -1,0 +1,898 @@
+productid,instrumentid,instrumenttype,category
+FSTS,DE000A0AEUZ5,future,index
+FDIV,DE000A0SNKW6,future,index
+FSTR,DE000A0DMXX1,future,index
+FTDX,DE0002270287,future,index
+FSTL,DE000A0V8N44,future,index
+FSTV,DE000A0DMXY9,future,index
+FSTT,DE0005705644,future,index
+FSTO,DE000A0AEU12,future,index
+FSTZ,DE000A0DMXZ6,future,index
+FSTG,DE000A0AEU38,future,index
+FSTH,DE0005705628,future,index
+FSTI,DE0002272085,future,index
+FSTY,DE0005705636,future,index
+FSTE,DE000A0AEU04,future,index
+F2MX,DE000A0BRCY6,future,index
+FSTC,DE000A0DMX16,future,index
+FSTA,DE000A0DMX08,future,index
+FSTN,DE000A0DMX24,future,index
+FDAX,DE0008469594,future,index
+FXXP,DE000A1DKQK4,future,index
+FSTF,DE000A0AEUY8,future,index
+FSTU,DE0002272077,future,index
+FSTB,DE0005705610,future,index
+FSTM,DE000A0AEU20,future,index
+PSTF,DE000A0V7626,future,single stock
+UNHF,DE000A0SYE26,future,single stock
+PU8F,DE000A0JY134,future,single stock
+UTXF,DE000A0SYE18,future,single stock
+SWMF,DE000A0SYGE9,future,single stock
+OUTF,DE000A0JY5A5,future,single stock
+RTSG,DE000A1KDZW0,future,single stock
+PGFF,DE000A0SYEW6,future,single stock
+N10F,DE000A0MELU0,future,single stock
+PMFF,DE000A0YK884,future,single stock
+TWFF,DE000A0SYB45,future,single stock
+OTEF,DE000A0JY4N1,future,single stock
+FDXF,DE000A0YKRA1,future,single stock
+SMIF,DE000A0SYBS0,future,single stock
+AYOF,DE000A1MAHM1,future,single stock
+BI3F,DE000A11RDN3,future,single stock
+ABXF,DE000A1MAPY9,future,single stock
+EG4F,DE000A0JY2C8,future,single stock
+RGRF,DE000A1CQ463,future,single stock
+CLFF,DE000A0YK9A4,future,single stock
+MOFF,DE000A0SYDZ1,future,single stock
+SBUF,DE000A1A4QE3,future,single stock
+V4LF,DE000A1DKE77,future,single stock
+QCOF,DE000A0SYEX4,future,single stock
+BMYF,DE000A0SYD76,future,single stock
+ENTG,DE000A1KDZG3,future,single stock
+GILF,DE000A0XWZ59,future,single stock
+ORCF,DE000A0XWZ00,future,single stock
+UPSF,DE000A0SYE00,future,single stock
+JNJF,DE000A0SYEM7,future,single stock
+KO7F,DE000A0MELX4,future,single stock
+ZO1F,DE000A11RNZ6,future,single stock
+AXPF,DE000A0SYD19,future,single stock
+XOMF,DE000A0SYEF1,future,single stock
+AMGF,DE000A0SYE42,future,single stock
+AZUL,DE000A1YD408,future,single stock
+FLNH,DE000A1PHLH1,future,single stock
+VTBF,DE000A0SYDV0,future,single stock
+JPMF,DE000A0SYEN5,future,single stock
+GANG,DE000A1A4R04,future,single stock
+KOFF,DE000A0SYD92,future,single stock
+MSTF,DE000A0XWZW5,future,single stock
+SVTF,DE000A0SYCQ2,future,single stock
+WMTF,DE000A0SYE67,future,single stock
+MVVF,DE000A0YKYN0,future,single stock
+RW3G,DE000A1MLD27,future,single stock
+GKNF,DE000A0SYC10,future,single stock
+GTQF,DE000A0JY3N3,future,single stock
+FOOF,DE000A1EZMA0,future,single stock
+AEMF,DE000A1PHLS8,future,single stock
+B5AF,DE000A0X71B1,future,single stock
+TRVF,DE000A0YK9U2,future,single stock
+SABF,DE000A0SYA20,future,single stock
+AAPF,DE000A0SYD35,future,single stock
+KFTF,DE000A0SYKY9,future,single stock
+PSAF,DE000A0XW0B8,future,single stock
+SLBF,DE000A0SYEY2,future,single stock
+VISF,DE000A1PHVP3,future,single stock
+HESF,DE000A0MEWU7,future,single stock
+MRWF,DE000A0SYBE0,future,single stock
+IDAF,DE000A0JY225,future,single stock
+DDFF,DE000A0XWZ83,future,single stock
+CCLF,DE000A0SYB52,future,single stock
+CE2F,DE000A0XW0A0,future,single stock
+AYOG,DE000A1RRAW8,future,single stock
+BM3F,DE000A0MEV33,future,single stock
+STRF,DE000A0Z31H7,future,single stock
+KINF,DE000A1MK7Z8,future,single stock
+YHOF,DE000A0YLAF4,future,single stock
+GECF,DE000A0XWZV7,future,single stock
+ELOF,DE000A1MK747,future,single stock
+GOSF,DE000A0SYEH7,future,single stock
+CHKF,DE000A0YKRV7,future,single stock
+SIIF,DE000A1MK739,future,single stock
+IBMF,DE000A0XWZX3,future,single stock
+BLNF,DE000A0SYBJ9,future,single stock
+ASGG,DE000A1KDY65,future,single stock
+DWDF,DE000A0SYES4,future,single stock
+PSOF,DE000A0SYBK7,future,single stock
+CMAI,DE000A1CQ9Y3,future,single stock
+NTFF,DE000A11RYY6,future,single stock
+NPWF,DE000A0SYBQ4,future,single stock
+MMMF,DE000A0SYDW8,future,single stock
+UNAF,DE000A11RW34,future,single stock
+ELEF,DE000A0XW4V8,future,single stock
+NKEF,DE000A0YK9V0,future,single stock
+TQIF,DE000A0C39Q0,future,single stock
+DISF,DE000A0SYE75,future,single stock
+HAVF,DE000A0JY1X6,future,single stock
+ANAG,DE000A1CRKF4,future,single stock
+VZFF,DE000A0SYE34,future,single stock
+MCDF,DE000A0SYEP0,future,single stock
+RDAF,DE000A11RW26,future,single stock
+AAPG,DE000A11RR98,future,single stock
+DTVF,DE000A0YK9L1,future,single stock
+UNPF,DE000A0YK9Q0,future,single stock
+TTIF,DE000A11RD03,future,single stock
+ABTF,DE000A0SYDX6,future,single stock
+CSCF,DE000A0XWZY1,future,single stock
+PFEF,DE000A0SYEV8,future,single stock
+KAZF,DE000A0SYCY6,future,single stock
+INTF,DE000A0XWZZ8,future,single stock
+FXGL,DE000A1EY8V9,future,single stock
+SESF,DE000A0JY5L2,future,single stock
+FCXG,DE000A1KD639,future,single stock
+NEMF,DE000A0YK967,future,single stock
+MKYF,DE000A1KP518,future,single stock
+GEOF,DE000A0XW428,future,single stock
+AADF,DE000A1PHMM9,future,single stock
+LLYF,DE000A0SYEE4,future,single stock
+YITF,DE000A0JY4R2,future,single stock
+BIIF,DE000A0YKRD5,future,single stock
+CATF,DE000A0XWZ42,future,single stock
+ABFF,DE000A0SYCN9,future,single stock
+KMBF,DE000A0YK926,future,single stock
+MA3F,DE000A0MEV41,future,single stock
+NHYG,DE000A1EYHZ0,future,single stock
+WSTG,DE000A1CQ8J6,future,single stock
+RWWF,DE000A0JY597,future,single stock
+MCCF,DE000A0SYER6,future,single stock
+YUMF,DE000A1A4QG8,future,single stock
+RNYF,DE000A1N55P3,future,single stock
+POCF,DE000A1MAPZ6,future,single stock
+WFCF,DE000A0SYFA9,future,single stock
+PEPF,DE000A0SYEU0,future,single stock
+MAFF,DE000A0YLAE7,future,single stock
+EDPF,DE000A0JY589,future,single stock
+IMTG,DE000A0V8NF4,future,single stock
+N7MF,DE000A0MELV8,future,single stock
+CITG,DE000A1KQJL9,future,single stock
+HALF,DE000A0YKQ79,future,single stock
+BACF,DE000A0SYD50,future,single stock
+CVCF,DE000A1A4P71,future,single stock
+STLF,DE000A1YD275,future,single stock
+TEQF,DE000A0SYGD1,future,single stock
+PBRF,DE000A1DKFA8,future,single stock
+SHPF,DE000A0SYBF7,future,single stock
+LVSF,DE000A1A4QJ2,future,single stock
+KGFF,DE000A0SYBR2,future,single stock
+DEFF,DE000A0YKRB9,future,single stock
+COPF,DE000A0SYEC8,future,single stock
+FBF,DE000A1PHN69,future,single stock
+BMTF,DE000A0SYAS2,future,single stock
+AZUK,DE000A1MLE26,future,single stock
+AMZF,DE000A0YK9F3,future,single stock
+CCJF,DE000A1PHLY6,future,single stock
+EBAF,DE000A0YKQ95,future,single stock
+BDSG,DE000A0ME6V8,future,single stock
+IIIF,DE000A0SYB11,future,single stock
+LSEF,DE000A0SYDM9,future,single stock
+SSEF,DE000A0SYA12,future,single stock
+HDFF,DE000A0SYEL9,future,single stock
+TWXG,DE000A11RSB6,future,single stock
+HUKF,DE000A0JY464,future,single stock
+FOOG,DE000A1XQ7H7,future,single stock
+TFFF,DE000A0SYD43,future,single stock
+KELF,DE000A1EZEP5,future,single stock
+GF8F,DE000A0JY1Q0,future,single stock
+CVXF,DE000A0SYD84,future,single stock
+TWTF,DE000A1YDZ50,future,single stock
+YT2F,DE000A0JY6D7,future,single stock
+BCOF,DE000A0SYD68,future,single stock
+FEU3,DE0009653147,future,money market
+FEO1,DE0007201535,future,money market
+FLIC,DE000A1YD7E8,future,money market
+GE22,DE000A13RYD6,future,money market
+GE23,DE000A13RYE4,future,money market
+GE24,DE000A13RYF1,future,money market
+GE25,DE000A13RYG9,future,money market
+OGB2,DE000A13RL50,option,fixed income
+OEU3,DE0009653154,option,money market
+OEM2,DE000A1YD8G1,option,money market
+OEM3,DE000A1YD8H9,option,money market
+OEM4,DE000A1YD8J5,option,money market
+EUCA,DE000A1K0300O,option,single stock
+EUN2,IE0008471009O,option,single stock
+EVK ,DE000EVNK013O,option,single stock
+EVK,DE000EVNK013O,option,single stock
+EVT,DE0005664809O,option,single stock
+EVT ,DE0005664809O,option,single stock
+RNL ,FR0000131906O,option,single stock
+RNL,FR0000131906O,option,single stock
+ROG ,CH0012032048O,option,single stock
+ROG,CH0012032048O,option,single stock
+GLEN,JE00B4T3BW64O,option,single stock
+GOB,FR0000125007O,option,single stock
+GOB ,FR0000125007O,option,single stock
+HEI ,DE0006047004O,option,single stock
+HEI,DE0006047004O,option,single stock
+ROY ,GB00B03MLX29O,option,single stock
+ROY,GB00B03MLX29O,option,single stock
+SAP,DE0007164600O,option,single stock
+SAP ,DE0007164600O,option,single stock
+SLM,DE000A111338O,option,single stock
+SLM ,DE000A111338O,option,single stock
+FME ,DE0005785802O,option,single stock
+FME,DE0005785802O,option,single stock
+SC0S,IE00B5MJYX09O,option,single stock
+SC0V,IE00B5MTWH09O,option,single stock
+STR ,DE000A0SYH56,option,single stock
+STR,DE000A0SYH56,option,single stock
+ABBN,CH0012221716O,option,single stock
+AB1,GB00B128C026O,option,single stock
+AB1 ,GB00B128C026O,option,single stock
+ACR ,FR0000120404O,option,single stock
+ACR,FR0000120404O,option,single stock
+ADEN,CH0012138605O,option,single stock
+AER,GB0002634946O,option,single stock
+AER ,GB0002634946O,option,single stock
+AFX ,DE0005313704O,option,single stock
+AFX,DE0005313704O,option,single stock
+AHA,GB00B1XZS820O,option,single stock
+AHA ,GB00B1XZS820O,option,single stock
+AIR,FR0000120073O,option,single stock
+AIR ,FR0000120073O,option,single stock
+ANDR,AT0000730007O,option,single stock
+ANN ,DE000A1ML7J1O,option,single stock
+ANN,DE000A1ML7J1O,option,single stock
+AOM,FR0010220475O,option,single stock
+AOM ,FR0010220475O,option,single stock
+BALN,CH0012410517O,option,single stock
+BARN,CH0009002962O,option,single stock
+BAS,DE000BASF111O,option,single stock
+BAS ,DE000BASF111O,option,single stock
+BAY ,DE000BAY0017O,option,single stock
+BAY,DE000BAY0017O,option,single stock
+BEI,DE0005200000O,option,single stock
+BEI ,DE0005200000O,option,single stock
+BIO,CH0038389992O,option,single stock
+BIO ,CH0038389992O,option,single stock
+BLT,GB0000566504O,option,single stock
+BLT ,GB0000566504O,option,single stock
+BNR ,DE000A1DAHH0O,option,single stock
+BNR,DE000A1DAHH0O,option,single stock
+BPV,IT0005002883O,option,single stock
+BSN,FR0000120644O,option,single stock
+BSN ,FR0000120644O,option,single stock
+BTG ,GB0030913577O,option,single stock
+BTG,GB0030913577O,option,single stock
+BWO ,AT00BUWOG001O,option,single stock
+BWO,AT00BUWOG001O,option,single stock
+BX7,BE0003810273O,option,single stock
+BX7 ,BE0003810273O,option,single stock
+BYG,FR0000120503O,option,single stock
+BYG ,FR0000120503O,option,single stock
+BYW6,DE0005194062O,option,single stock
+CAR,FR0000120172O,option,single stock
+CAR ,FR0000120172O,option,single stock
+COK,DE0005419105O,option,single stock
+COK ,DE0005419105O,option,single stock
+CON ,DE0005439004O,option,single stock
+CON,DE0005439004O,option,single stock
+COR ,AT0000697750O,option,single stock
+COR,AT0000697750O,option,single stock
+DAI,DE0007100000O,option,single stock
+DAI ,DE0007100000O,option,single stock
+DBK ,DE0005140008O,option,single stock
+DBK,DE0005140008O,option,single stock
+DBXA,LU0274209237O,option,single stock
+DBXW,LU0274208692O,option,single stock
+DEQ,DE0007480204O,option,single stock
+DEQ ,DE0007480204O,option,single stock
+DEZ,DE0006305006O,option,single stock
+DEZ ,DE0006305006O,option,single stock
+DWNI,DE000A0HN5C6O,option,single stock
+EAD ,NL0000235190O,option,single stock
+EAD,NL0000235190O,option,single stock
+ENL5,IT0003128367O,option,single stock
+ENUR,FI0009005961O,option,single stock
+EOA ,DE000ENAG999O,option,single stock
+EOA,DE000ENAG999O,option,single stock
+BBVD,ES0113211835O,option,single stock
+EXS1,DE0005933931O,option,single stock
+E2F,FR0010242511O,option,single stock
+E2F ,FR0010242511O,option,single stock
+FIE ,DE0005772206O,option,single stock
+FIE,DE0005772206O,option,single stock
+FIN ,CH0001752309O,option,single stock
+FIN,CH0001752309O,option,single stock
+F3D,NL0000352565O,option,single stock
+F3D ,NL0000352565O,option,single stock
+GAZ,US3682872078O,option,single stock
+GAZ ,US3682872078O,option,single stock
+GEBN,CH0030170408O,option,single stock
+GXO ,GB0009252882O,option,single stock
+GXO,GB0009252882O,option,single stock
+GZF,FR0010208488O,option,single stock
+GZF ,FR0010208488O,option,single stock
+G1A,DE0006602006O,option,single stock
+G1A ,DE0006602006O,option,single stock
+HHFA,DE000A0S8488O,option,single stock
+HNR1,DE0008402215O,option,single stock
+HOLN,CH0012214059O,option,single stock
+HOT ,DE0006070006O,option,single stock
+HOT,DE0006070006O,option,single stock
+HSB ,GB0005405286O,option,single stock
+HSB,GB0005405286O,option,single stock
+IES5,IT0000072618O,option,single stock
+JEN ,DE0006229107O,option,single stock
+JEN,DE0006229107O,option,single stock
+KBC,DE0006053952O,option,single stock
+KBC ,DE0006053952O,option,single stock
+KGX,DE000KGX8881O,option,single stock
+KGX ,DE000KGX8881O,option,single stock
+KPN,NL0000009082O,option,single stock
+KPN ,NL0000009082O,option,single stock
+KRN,DE0006335003O,option,single stock
+KRN ,DE0006335003O,option,single stock
+LXS ,DE0005470405O,option,single stock
+LXS,DE0005470405O,option,single stock
+LYM7,FR0010429068O,option,single stock
+MDS5,IT0001063210O,option,single stock
+MEO,DE0007257503O,option,single stock
+MEO ,DE0007257503O,option,single stock
+MLP ,DE0006569908O,option,single stock
+MLP,DE0006569908O,option,single stock
+MOH,FR0000121014O,option,single stock
+MOH ,FR0000121014O,option,single stock
+MOS ,BE0003735496O,option,single stock
+MOS,BE0003735496O,option,single stock
+MRK,DE0006599905O,option,single stock
+MRK ,DE0006599905O,option,single stock
+NDA,DE0006766504O,option,single stock
+NDA ,DE0006766504O,option,single stock
+RBS,GB00B7T77214O,option,single stock
+RBS ,GB00B7T77214O,option,single stock
+RHK,DE0007042301O,option,single stock
+RHK ,DE0007042301O,option,single stock
+RHM ,DE0007030009O,option,single stock
+RHM,DE0007030009O,option,single stock
+RIBH,AT0000606306O,option,single stock
+OCI1,ES0167050915O,option,single stock
+REP ,ES0173516115O,option,single stock
+REP,ES0173516115O,option,single stock
+RPL,FI0009005987O,option,single stock
+RPL ,FI0009005987O,option,single stock
+RTZ ,GB0007188757O,option,single stock
+RTZ,GB0007188757O,option,single stock
+RWE,DE0007037129O,option,single stock
+RWE ,DE0007037129O,option,single stock
+SAZ ,DE0007251803O,option,single stock
+SAZ,DE0007251803O,option,single stock
+SBN ,US80585Y3080O,option,single stock
+SBN,US80585Y3080O,option,single stock
+SCMN,CH0008742519O,option,single stock
+SC0G,IE00B60SX063O,option,single stock
+SC0W,IE00B5MTWY73O,option,single stock
+SOON,CH0012549785O,option,single stock
+SQU,FR0000125486O,option,single stock
+SQU ,FR0000125486O,option,single stock
+TSB,GB0008706128O,option,single stock
+TSB ,GB0008706128O,option,single stock
+UBSN,CH0244767585O,option,single stock
+UHR ,CH0012255151O,option,single stock
+UHR,CH0012255151O,option,single stock
+UHRN,CH0012255144O,option,single stock
+UTDI,DE0005089031O,option,single stock
+VAC,FR0000120354O,option,single stock
+VAC ,FR0000120354O,option,single stock
+VER,AT0000746409O,option,single stock
+VER ,AT0000746409O,option,single stock
+VOD,GB00BH4HKS39O,option,single stock
+VOD ,GB00BH4HKS39O,option,single stock
+VOS ,DE0007667107O,option,single stock
+VOS,DE0007667107O,option,single stock
+VOW,DE0007664005O,option,single stock
+VOW ,DE0007664005O,option,single stock
+VO3 ,DE0007664039O,option,single stock
+VO3,DE0007664039O,option,single stock
+VVU ,FR0000127771O,option,single stock
+VVU,FR0000127771O,option,single stock
+WCH,DE000WCH8881O,option,single stock
+WCH ,DE000WCH8881O,option,single stock
+WDI,DE0007472060O,option,single stock
+WDI ,DE0007472060O,option,single stock
+XCA ,FR0000045072O,option,single stock
+XCA,FR0000045072O,option,single stock
+XMT,CH0008899764O,option,single stock
+XMT ,CH0008899764O,option,single stock
+ZAL ,DE000ZAL1111O,option,single stock
+ZAL,DE000ZAL1111O,option,single stock
+7AA ,LU0569974404O,option,single stock
+7AA,LU0569974404O,option,single stock
+ADS ,DE000A1EWWW0O,option,single stock
+ADS,DE000A1EWWW0O,option,single stock
+ADV,DE0005103006O,option,single stock
+ADV ,DE0005103006O,option,single stock
+AEN ,NL0000303709O,option,single stock
+AEN,NL0000303709O,option,single stock
+ALV,DE0008404005O,option,single stock
+ALV ,DE0008404005O,option,single stock
+AQU,DE0005156004O,option,single stock
+AQU ,DE0005156004O,option,single stock
+ARL ,DE0005408116O,option,single stock
+ARL,DE0005408116O,option,single stock
+ASM ,NL0010273215O,option,single stock
+ASM,NL0010273215O,option,single stock
+ATLN,CH0010532478O,option,single stock
+AXA,FR0000120628O,option,single stock
+AXA ,FR0000120628O,option,single stock
+AZA ,GB0009895292O,option,single stock
+AZA,GB0009895292O,option,single stock
+BBL,GB0031348658O,option,single stock
+BBL ,GB0031348658O,option,single stock
+BC8 ,DE0005158703O,option,single stock
+BC8,DE0005158703O,option,single stock
+BNP,FR0000131104O,option,single stock
+BNP ,FR0000131104O,option,single stock
+FTE,FR0000133308O,option,single stock
+FTE ,FR0000133308O,option,single stock
+O1BC,DE000XNG8888O,option,single stock
+O2D,DE000A1J5RX9O,option,single stock
+O2D ,DE000A1J5RX9O,option,single stock
+PEU,FR0000121501O,option,single stock
+PEU ,FR0000121501O,option,single stock
+SDF,DE000KSAG888O,option,single stock
+SDF ,DE000KSAG888O,option,single stock
+SEV,FR0010613471O,option,single stock
+SEV ,FR0010613471O,option,single stock
+SGE,FR0000130809O,option,single stock
+SGE ,FR0000130809O,option,single stock
+SGL,DE0007235301O,option,single stock
+SGL ,DE0007235301O,option,single stock
+SHL,GB00B03MM408O,option,single stock
+SHL ,GB00B03MM408O,option,single stock
+SIX2,DE0007231326O,option,single stock
+SLHN,CH0014852781O,option,single stock
+SMA,DE000A0DJ6J9O,option,single stock
+SMA ,DE000A0DJ6J9O,option,single stock
+SMHN,DE000A1K0235O,option,single stock
+BIR ,IE0030606259O,option,single stock
+BIR,IE0030606259O,option,single stock
+BMW ,DE0005190003O,option,single stock
+BMW,DE0005190003O,option,single stock
+BOSS,DE000A1PHFF7O,option,single stock
+BPM,IT0000064482O,option,single stock
+BPM ,IT0000064482O,option,single stock
+BPT ,GB0007980591O,option,single stock
+BPT,GB0007980591O,option,single stock
+CBK ,DE000CBK1001O,option,single stock
+CBK,DE000CBK1001O,option,single stock
+CFR ,CH0210483332O,option,single stock
+CFR,CH0210483332O,option,single stock
+CLN ,CH0012142631O,option,single stock
+CLN,CH0012142631O,option,single stock
+CRI5,IT0004781412O,option,single stock
+CSGN,CH0012138530O,option,single stock
+DBX1,LU0292107645O,option,single stock
+DLG ,GB0059822006O,option,single stock
+DLG,GB0059822006O,option,single stock
+DPW ,DE0005552004O,option,single stock
+DPW,DE0005552004O,option,single stock
+DRIA,DE0005545503O,option,single stock
+DTE ,DE0005557508O,option,single stock
+DTE,DE0005557508O,option,single stock
+DUE ,DE0005565204O,option,single stock
+DUE,DE0005565204O,option,single stock
+EBS ,AT0000652011O,option,single stock
+EBS,AT0000652011O,option,single stock
+ERCB,SE0000108656O,option,single stock
+FNT,DE000A0Z2ZZ5O,option,single stock
+FNT ,DE000A0Z2ZZ5O,option,single stock
+FOT ,FI0009007132O,option,single stock
+FOT,FI0009007132O,option,single stock
+FO4,BE0974264930O,option,single stock
+FO4 ,BE0974264930O,option,single stock
+FPE3,DE0005790430O,option,single stock
+FRA ,DE0005773303O,option,single stock
+FRA,DE0005773303O,option,single stock
+GALN,CH0015536466O,option,single stock
+GIVN,CH0010645932O,option,single stock
+BSD2,ES0113900J37O,option,single stock
+IFX ,DE0006231004O,option,single stock
+IFX,DE0006231004O,option,single stock
+IMO,AT0000809058O,option,single stock
+IMO ,AT0000809058O,option,single stock
+ISPA,LU0323134006O,option,single stock
+IXD,ES0148396007O,option,single stock
+IXD ,ES0148396007O,option,single stock
+KBWA,NL0000852580O,option,single stock
+KNIN,CH0025238863O,option,single stock
+LEG,DE000LEG1110O,option,single stock
+LEG ,DE000LEG1110O,option,single stock
+LEO ,DE0005408884O,option,single stock
+LEO,DE0005408884O,option,single stock
+LHA,DE0008232125O,option,single stock
+LHA ,DE0008232125O,option,single stock
+LIN,DE0006483001O,option,single stock
+LIN ,DE0006483001O,option,single stock
+LOGN,CH0025751329O,option,single stock
+LONN,CH0013841017O,option,single stock
+LOR,FR0000120321O,option,single stock
+LOR ,FR0000120321O,option,single stock
+L8I2,FR0010204073O,option,single stock
+MAN ,DE0005937007O,option,single stock
+MAN,DE0005937007O,option,single stock
+MOR ,DE0006632003O,option,single stock
+MOR,DE0006632003O,option,single stock
+MUV2,DE0008430026O,option,single stock
+NDX1,DE000A0D6554O,option,single stock
+NESN,CH0038863350O,option,single stock
+NGG ,GB00B08SNH34O,option,single stock
+NGG,GB00B08SNH34O,option,single stock
+NOA3,FI0009000681O,option,single stock
+NOEJ,DE000A1H8BV3O,option,single stock
+NOVN,CH0012005267O,option,single stock
+OSR,DE000LED4000O,option,single stock
+OSR ,DE000LED4000O,option,single stock
+PFV ,DE0006916604O,option,single stock
+PFV,DE0006916604O,option,single stock
+PHI1,NL0000009538O,option,single stock
+POP,ES0113790226O,option,single stock
+POP ,ES0113790226O,option,single stock
+POR3,DE000PAH0038O,option,single stock
+PRA,DE000A0F6MD5O,option,single stock
+PRA ,DE000A0F6MD5O,option,single stock
+PSAN,DE000A0Z1JH9O,option,single stock
+PSM,DE000PSM7770O,option,single stock
+PSM ,DE000PSM7770O,option,single stock
+PUM,DE0006969603O,option,single stock
+PUM ,DE0006969603O,option,single stock
+QIA,NL0000240000O,option,single stock
+QSC ,DE0005137004O,option,single stock
+QSC,DE0005137004O,option,single stock
+RAA,DE0007010803O,option,single stock
+RAA ,DE0007010803O,option,single stock
+RBE,GB00B24CGK77O,option,single stock
+RBE ,GB00B24CGK77O,option,single stock
+RKET,DE000A12UKK6O,option,single stock
+IBE ,ES0144580Y14O,option,single stock
+IBE,ES0144580Y14O,option,single stock
+SND ,FR0000121972O,option,single stock
+SND,FR0000121972O,option,single stock
+SNW ,FR0000120578O,option,single stock
+SNW,FR0000120578O,option,single stock
+SOW,DE0003304002O,option,single stock
+SOW ,DE0003304002O,option,single stock
+SREN,CH0126881561O,option,single stock
+SWV ,DE000A1YCMM2O,option,single stock
+SWV,DE000A1YCMM2O,option,single stock
+SYNN,CH0011037469O,option,single stock
+SY1,DE000SYM9999O,option,single stock
+SY1 ,DE000SYM9999O,option,single stock
+SZG ,DE0006202005O,option,single stock
+SZG,DE0006202005O,option,single stock
+SZU,DE0007297004O,option,single stock
+SZU ,DE0007297004O,option,single stock
+TAG,DE0008303504O,option,single stock
+TAG ,DE0008303504O,option,single stock
+TCO ,GB0008847096O,option,single stock
+TCO,GB0008847096O,option,single stock
+THP,FR0000131708O,option,single stock
+TKA,DE0007500001O,option,single stock
+TKA ,DE0007500001O,option,single stock
+TLX,DE000TLX1005O,option,single stock
+TLX ,DE000TLX1005O,option,single stock
+TOTB,FR0000120271O,option,single stock
+TUI,DE000TUAG000O,option,single stock
+TUI ,DE000TUAG000O,option,single stock
+UNI ,NL0000009355O,option,single stock
+UNI,NL0000009355O,option,single stock
+VOE ,AT0000937503O,option,single stock
+VOE,AT0000937503O,option,single stock
+VVD ,FR0000124141O,option,single stock
+VVD,FR0000124141O,option,single stock
+SUN,CH0038388911O,option,single stock
+SUN ,CH0038388911O,option,single stock
+TNE5,ES0178430E18O,option,single stock
+PST,DE000A0SYH49,option,single stock
+PST ,DE000A0SYH49,option,single stock
+TQI5,DE0001458214,option,single stock
+OXGL,DE000A1EY8W7,option,single stock
+ASG5,DE0001458172,option,single stock
+ENT5,DE0001458198,option,single stock
+HEN3,DE0006048432O,option,single stock
+KCO ,DE000KC01000O,option,single stock
+KCO,DE000KC01000O,option,single stock
+LPK,DE0006450000O,option,single stock
+LPK ,DE0006450000O,option,single stock
+FRE ,DE0005785604O,option,single stock
+FRE,DE0005785604O,option,single stock
+HLE,DE000A13SX22O,option,single stock
+HLE ,DE000A13SX22O,option,single stock
+LISN,CH0010570759O,option,single stock
+LISP,CH0010570767O,option,single stock
+WST ,DE000A0SYH64,option,single stock
+WST,DE000A0SYH64,option,single stock
+AIX ,DE000A0WMPJ6O,option,single stock
+AIX,DE000A0WMPJ6O,option,single stock
+ITK,BE0003793107O,option,single stock
+DB1,DE0005810055O,option,single stock
+KU2,DE0006204407O,option,single stock
+SNG,DE0007238909O,option,single stock
+GLD,DE0005878003O,option,single stock
+INN,NL0000303600O,option,single stock
+ITA,IT0001465159O,option,single stock
+TNE,NL0009739424O,option,single stock
+WIN,DE000A0CAYB2O,option,single stock
+OEST,DE0007923542,option,index
+OESU,DE0007200685,option,index
+OESX,DE0009652396,option,index
+OESZ,DE0002271061,option,index
+OESG,DE0002271079,option,index
+OESH,DE0007923526,option,index
+OESF,DE0007200719,option,index
+OESN,DE0002271103,option,index
+OESB,DE0007923518,option,index
+OESM,DE0007200693,option,index
+FESR,DE0002271137,future,index
+FESV,DE0002271186,future,index
+FESL,DE000A0V8N36,future,index
+FESC,DE0002272028,future,index
+FESI,DE0005303663,future,index
+FESS,DE0002272036,future,index
+FESA,DE0005303648,future,index
+FESO,DE0002271160,future,index
+FESE,DE0005303655,future,index
+FESY,DE0005705677,future,index
+FEST,DE0005705685,future,index
+FESU,DE0007200727,future,index
+FESN,DE0002271194,future,index
+FESB,DE0005705651,future,index
+FESM,DE0007200735,future,index
+OES1,DE000A0G9C21,option,index
+OES2,DE000A0G9C39,option,index
+OES4,DE000A0G9C47,option,index
+OES5,DE000A0G9C54,option,index
+OEB1,DE000A11RBL1,option,index
+OEB2,DE000A11RBM9,option,index
+OSTA,DE000A0DMX65,option,index
+OSTB,DE0007200750,option,index
+OSTC,DE000A0DMX73,option,index
+OSTE,DE000A0AEU61,option,index
+OSTF,DE000A0AEU46,option,index
+OSTG,DE000A0AEU95,option,index
+OSTH,DE0005303614,option,index
+OSTI,DE0002272101,option,index
+OSTL,DE000A0V8N69,option,index
+OSTM,DE000A0AEU87,option,index
+OSTN,DE000A0DMX81,option,index
+OSTO,DE000A0AEU79,option,index
+OSTR,DE000A0DMX32,option,index
+OSTS,DE000A0AEU53,option,index
+OSTT,DE0007200768,option,index
+OSTU,DE0002272093,option,index
+OSTV,DE000A0DMX40,option,index
+OSTY,DE0007200776,option,index
+OSTZ,DE000A0DMX57,option,index
+OXXP,DE000A1DKQT5,option,index
+FCEF,DE000A1N53S2,future,forex
+FCEP,DE000A1N53T0,future,forex
+FCEU,DE000A1N53R4,future,forex
+FCPF,DE000A1N53V6,future,forex
+FCPU,DE000A1N53U8,future,forex
+FCUF,DE000A1N53W4,future,forex
+OCEF,EU0009654078,option,forex
+OCEP,EU0009653088,option,forex
+OCEU,EU0009652759,option,forex
+OCPF,GB0009534727,option,forex
+OCPU,GB0031973075,option,forex
+OCUF,XC0009652816,option,forex
+FDXD,DE000A0ZW4D4,future,dividends index
+FDVD,DE000A0ZW4E2,future,dividends index
+FEXD,DE000A0V8MN0,future,dividends index
+FEBD,DE000A1MLMX5,future,dividends index
+FEID,DE000A1MLMY3,future,dividends index
+FEED,DE000A1MLMZ0,future,dividends index
+FD3D,DE000A0ZW4F9,future,dividends index
+FETD,DE000A1MLM00,future,dividends index
+FEUD,DE000A1MLM18,future,dividends index
+FSMD,DE000A0ZW4C6,future,dividends index
+FSBD,DE000A1MLMS5,future,dividends index
+FSID,DE000A1MLMT3,future,dividends index
+OESR,DE0002271046,option,index
+OESV,DE0002271095,option,index
+OESC,DE0002271111,option,index
+OESI,DE0005303564,option,index
+OESS,DE0002271129,option,index
+OESA,DE0005303572,option,index
+OESO,DE0002271087,option,index
+OESE,DE0005303556,option,index
+OESY,DE0007923534,option,index
+FSED,DE000A1MLMU1,future,dividends index
+FSTD,DE000A1MLMV9,future,dividends index
+FSUD,DE000A1MLMW7,future,dividends index
+A2AL,DE000A1KD0H2,future,dividends single stock
+A2BB,DE000A1HTZH3,future,dividends single stock
+A2DE,DE000A13RNF4,future,dividends single stock
+A2DS,DE000A1XQ1T5,future,dividends single stock
+A2EN,DE000A1EZH43,future,dividends single stock
+A2HO,DE000A13RNV1,future,dividends single stock
+A2LV,DE000A1EZHD4,future,dividends single stock
+A2OM,DE000A1EZH68,future,dividends single stock
+A2SG,DE000A1EZH92,future,dividends single stock
+A2SM,DE000A1PHSN4,future,dividends single stock
+A2V,DE000A1XQ1N8,future,dividends single stock
+A2V ,DE000A1XQ1N8,future,dividends single stock
+A2XA,DE000A1EZHE2,future,dividends single stock
+A2ZN,DE000A1KD0J8,future,dividends single stock
+A3IR,DE000A1PHNL9,future,dividends single stock
+A4IR,DE000A11RQ73,future,dividends single stock
+B2AS,DE000A1EZHH5,future,dividends single stock
+B2AT,DE000A13RN82,future,dividends single stock
+B2AY,DE000A1EZHJ1,future,dividends single stock
+B2LT,DE000A1KD0G4,future,dividends single stock
+B2MW,DE000A1EZL13,future,dividends single stock
+B2NP,DE000A1EZHK9,future,dividends single stock
+B2P ,DE000A1KD0N0,future,dividends single stock
+B2P,DE000A1KD0N0,future,dividends single stock
+B2SN,DE000A1EZJF5,future,dividends single stock
+B2T ,DE000A1KD0S9,future,dividends single stock
+B2T,DE000A1KD0S9,future,dividends single stock
+B2YG,DE000A13RNS7,future,dividends single stock
+B3AR,DE000A1YDS34,future,dividends single stock
+B3BV,DE000A1HT0B2,future,dividends single stock
+C2FR,DE000A1HTZK7,future,dividends single stock
+C2NA,DE000A13RN90,future,dividends single stock
+C2RG,DE000A1EZJC2,future,dividends single stock
+C2SG,DE000A1HTZG5,future,dividends single stock
+C3AR,DE000A1KQTK0,future,dividends single stock
+C3RI,DE000A1MLFB5,future,dividends single stock
+C3SG,DE000A1PHW35,future,dividends single stock
+D2AI,DE000A1EZJD0,future,dividends single stock
+D2BK,DE000A1EZHM5,future,dividends single stock
+OEXD,DE000A1DKML1,option,dividends index
+D2GE,DE000A1KD0L4,future,dividends single stock
+D2PW,DE000A1XQ1U3,future,dividends single stock
+D2SM,DE000A13RNW9,future,dividends single stock
+D2TE,DE000A1EZHN3,future,dividends single stock
+D3B1,DE000A1PHMH9,future,dividends single stock
+D3BK,DE000A11RRA0,future,dividends single stock
+E2AS,DE000A1RR063,future,dividends single stock
+E2DF,DE000A1XQ1S7,future,dividends single stock
+E2NL,DE000A1EZHQ6,future,dividends single stock
+E2NT,DE000A1EZHR4,future,dividends single stock
+E2OA,DE000A1EZHP8,future,dividends single stock
+E2SL,DE000A1PHSQ7,future,dividends single stock
+F2TE,DE000A1EZHS2,future,dividends single stock
+G2EC,DE000A11Q943,future,dividends single stock
+G2OB,DE000A1EZJA6,future,dividends single stock
+G2ZF,DE000A1EZHT0,future,dividends single stock
+G3SK,DE000A1N5H24,future,dividends single stock
+H2OL,DE000A13RNJ6,future,dividends single stock
+H2SB,DE000A1KD0F6,future,dividends single stock
+I2BE,DE000A1EZJG3,future,dividends single stock
+I2NN,DE000A1EZJH1,future,dividends single stock
+I2SP,DE000A1EZH84,future,dividends single stock
+I2TK,DE000A1EZH76,future,dividends single stock
+I3ES,DE000A1KQNR8,future,dividends single stock
+I3XD,DE000A1RREC2,future,dividends single stock
+I4XD,DE000A1YDZP5,future,dividends single stock
+I5XD,DE000A11RYD0,future,dividends single stock
+J2NJ,DE000A11Q984,future,dividends single stock
+K3PN,DE000A1XQ7N5,future,dividends single stock
+L2IN,DE000A13RNY5,future,dividends single stock
+L2OR,DE000A1EZJK5,future,dividends single stock
+M2CD,DE000A11RAA6,future,dividends single stock
+M2EO,DE000A1XQ1W9,future,dividends single stock
+M2OF,DE000A11Q9V5,future,dividends single stock
+M2OH,DE000A1EZJL3,future,dividends single stock
+M2RK,DE000A13RNZ2,future,dividends single stock
+M2ST,DE000A11RAB4,future,dividends single stock
+M2UV,DE000A1EZHV6,future,dividends single stock
+M3OH,DE000A13RUE2,future,dividends single stock
+N2ES,DE000A1HTZC4,future,dividends single stock
+N2G,DE000A13RPA0,future,dividends single stock
+N2G ,DE000A13RPA0,future,dividends single stock
+N2OV,DE000A1HTZD2,future,dividends single stock
+N3OA,DE000A11RSF7,future,dividends single stock
+P2ER,DE000A1XQ1P3,future,dividends single stock
+P2FE,DE000A11RAD0,future,dividends single stock
+P2HI,DE000A1EZHU8,future,dividends single stock
+P2M ,DE000A11RAE8,future,dividends single stock
+P2M,DE000A11RAE8,future,dividends single stock
+P2PX,DE000A1XQ1Q1,future,dividends single stock
+R2DA,DE000A1KD0E9,future,dividends single stock
+R2EP,DE000A1EZJN9,future,dividends single stock
+R2NL,DE000A1XQ1R9,future,dividends single stock
+R2OG,DE000A1HTZE0,future,dividends single stock
+R2TZ,DE000A1KD0P5,future,dividends single stock
+R3EP,DE000A11RRE2,future,dividends single stock
+R3WE,DE000A1MLD35,future,dividends single stock
+S2CM,DE000A1HTZM3,future,dividends single stock
+S2GE,DE000A1EZHZ7,future,dividends single stock
+S2IE,DE000A1EZHY0,future,dividends single stock
+S2NW,DE000A1EZHX2,future,dividends single stock
+S2QU,DE000A1EZJT6,future,dividends single stock
+S2RE,DE000A1HTZL5,future,dividends single stock
+S2SD,DE000A1EZHG7,future,dividends single stock
+S2VT,DE000A13RN66,future,dividends single stock
+S3AP,DE000A1PHMK3,future,dividends single stock
+S3IE,DE000A1XRE27,future,dividends single stock
+S3ND,DE000A1L1844,future,dividends single stock
+S3RE,DE000A1XQU69,future,dividends single stock
+S4RE,DE000A11RPD8,future,dividends single stock
+T2KA,DE000A1XQ1V1,future,dividends single stock
+T2NE,DE000A1EZH01,future,dividends single stock
+T2OT,DE000A1EZH19,future,dividends single stock
+T2QI,DE000A1EZJR0,future,dividends single stock
+T2SC,DE000A1KD0R1,future,dividends single stock
+U2BL,DE000A1EZJU4,future,dividends single stock
+U2BS,DE000A1HTZF7,future,dividends single stock
+U2HR,DE000A13RNE7,future,dividends single stock
+U2NI,DE000A1EZH27,future,dividends single stock
+V2AC,DE000A13RN25,future,dividends single stock
+V2W3,DE000A1L19X7,future,dividends single stock
+V3O,DE000A1MK8G6,future,dividends single stock
+V3VU,DE000A1PHLM1,future,dividends single stock
+V4O,DE000A11RB70,future,dividends single stock
+V4O ,DE000A11RB70,future,dividends single stock
+X2CA,DE000A1EZJB4,future,dividends single stock
+Z2UR,DE000A1HTZJ9,future,dividends single stock
+EVAR,DE000A11Q8E3,future,volatility
+FVS,DE000A0Z3CW9,future,volatility
+FVS ,DE000A0Z3CW9,future,volatility
+OVS,DE000A0E4S49,option,volatility
+OVS ,DE000A0E4S49,option,volatility
+OEB4,DE000A11RBN7,option,index
+OEB5,DE000A11RBP2,option,index
+FESX,DE0009652388,future,index
+FESZ,DE0002271145,future,index
+FESG,DE0002271152,future,index
+FESH,DE0005705669,future,index
+FESF,DE0007200743,future,index
+OGBS,DE0009652701,option,fixed income
+OGBM,DE0009652693,option,fixed income
+OGBL,DE0009652685,option,fixed income
+OGB1,DE000A13RL43,option,fixed income
+OGB3,DE000A13RL68,option,fixed income
+OGB4,DE000A13RL76,option,fixed income
+OGB5,DE000A13RL84,option,fixed income
+OOAT,DE000A1XRC52,option,fixed income
+OEM1,DE000A1YD8F3,option,money market
+FGBS,DE0009652669,future,fixed income
+FGBM,DE0009652651,future,fixed income
+FGBL,DE0009652644,future,fixed income
+FGBX,DE0009652636,future,fixed income
+FBTS,DE000A1EZJ09,future,fixed income
+FBTM,DE000A1KQR10,future,fixed income
+FBTP,DE000A0ZW3V8,future,fixed income
+FOAM,DE000A1RRP48,future,fixed income
+FOAT,DE000A1MAPW3,future,fixed income
+FBON,DE000A163W29,future,fixed income
+CONF,CH0002741988,future,fixed income
+FSWS,DE000A11RAV2,future,money market
+FSWM,DE000A11RAX8,future,money market
+FSWL,DE000A11RAZ3,future,money market
+FSWX,DE000A11RA14,future,money market
+GE02,DE000A13RXT4,future,money market
+GE03,DE000A13RXU2,future,money market
+GE04,DE000A13RXV0,future,money market
+GE05,DE000A13RXW8,future,money market
+GE06,DE000A13RXX6,future,money market
+GE07,DE000A13RXY4,future,money market
+GE08,DE000A13RXZ1,future,money market
+GE09,DE000A13RX07,future,money market
+GE10,DE000A13RX15,future,money market
+GE11,DE000A13RX23,future,money market
+GE12,DE000A13RX31,future,money market
+GE13,DE000A13RX49,future,money market
+GE14,DE000A13RX56,future,money market
+GE15,DE000A13RX64,future,money market
+GE16,DE000A13RX72,future,money market
+GE17,DE000A13RX80,future,money market
+GE18,DE000A13RX98,future,money market
+GE19,DE000A13RYA2,future,money market
+GE20,DE000A13RYB0,future,money market
+GE21,DE000A13RYC8,future,money market
+GE26,DE000A13RYH7,future,money market
+GE27,DE000A13RYJ3,future,money market
+GE28,DE000A13RYK1,future,money market
+GE29,DE000A13RYL9,future,money market
+GE30,DE000A13RYM7,future,money market
