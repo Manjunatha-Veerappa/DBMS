@@ -139,125 +139,128 @@ o_txtfile = open("logfile.txt",'w')                      # logfile to store the 
 
 object = Importer(init_date, finl_date)
 count=0
-for item in os.listdir(src):
-    source = os.path.join(src, item)
-    date_search = re.search("([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})", source)  # Search for the datestring of the format DD-MM-YYYY in the name of a file/folder
-    try:
-        print(date_search)
-        date_str = date_search.group(0)
-        print(date_str)
-        import datetime
-        # date_format = datetime.datetime.strptime(date_str, "%d.%m.%Y").strftime('%d-%m-%Y') # convert the date string into a format YYYY.MM.DD
-        date_obj = datetime.datetime.strptime(date_str, "%Y.%m.%d").date()      # convert the date string into an object
-        count += 1
-        if (date_obj):
-            if(date_obj >= object.begin_date and date_obj <= object.end_date):  # compare the extracted date with the specified data range
-                o_file = open(source, 'r')
-                reader = csv.reader(o_file, delimiter=';')
-                for row in reader:
-                    if (row[1] == "F"):                                         # Filter out futures by call_put_flag == "F"
-                        row[18] = row[18] + ":" + row[19]                       # To get the loctimestamp (mm/dd/yyyy hh:mm:ss:mmm)
-                        import datetime
+for root, dirs, files in os.walk(src):
+    for file in files:
+        source = os.path.join(root,file)
+        date_search = re.search("([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})", source)
+        print (source)
+        date_search = re.search("([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})", source)  # Search for the datestring of the format DD-MM-YYYY in the name of a file/folder
+        try:
+            print(date_search)
+            date_str = date_search.group(0)
+            print(date_str)
+            import datetime
+            # date_format = datetime.datetime.strptime(date_str, "%d.%m.%Y").strftime('%d-%m-%Y') # convert the date string into a format YYYY.MM.DD
+            date_obj = datetime.datetime.strptime(date_str, "%Y.%m.%d").date()      # convert the date string into an object
+            count += 1
+            if (date_obj):
+                if(date_obj >= object.begin_date and date_obj <= object.end_date):  # compare the extracted date with the specified data range
+                    o_file = open(source, 'r')
+                    reader = csv.reader(o_file, delimiter=';')
+                    for row in reader:
+                        if (row[1] == "F"):                                         # Filter out futures by call_put_flag == "F"
+                            row[18] = row[18] + ":" + row[19]                       # To get the loctimestamp (mm/dd/yyyy hh:mm:ss:mmm)
+                            import datetime
 
-                        loc_time_stamp = datetime.datetime.strptime(row[18], "%m/%d/%Y %H:%M:%S:%f").strftime("%Y.%m.%d")  # convert date into a format yyyy.mm.dd
-                        loc_time_stamp_obj = datetime.datetime.strptime(loc_time_stamp, "%Y.%m.%d")  # date string to date object conversion
+                            loc_time_stamp = datetime.datetime.strptime(row[18], "%m/%d/%Y %H:%M:%S:%f").strftime("%Y.%m.%d")  # convert date into a format yyyy.mm.dd
+                            loc_time_stamp_obj = datetime.datetime.strptime(loc_time_stamp, "%Y.%m.%d")  # date string to date object conversion
 
-                        approx_expiration_date = row[3] + "." + row[2] + ".15"
-                        import datetime
-                        approx_expiration_date_object = datetime.datetime.strptime(approx_expiration_date, "%Y.%m.%d")
+                            approx_expiration_date = row[3] + "." + row[2] + ".15"
+                            import datetime
+                            approx_expiration_date_object = datetime.datetime.strptime(approx_expiration_date, "%Y.%m.%d")
 
-                        o_prodspec = open('product_info.csv', 'r')
-                        reader1 = csv.reader(o_prodspec)
-                        for row1 in reader1:
-                            if (row[0] == row1[0]):                     # To find the instrumentID for the corresponding productID
-                                row[0] = row1[1]
-                                break
-                        if (len(row[0]) < 5):                          # Checks if the length of the id is < 5 or not, if yes, No instrument ID for that
-                            o_txtfile.write(row[0] + "\n")               # productID. Hence save that productID in a logfile for the future reference
-                        else:
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Index futures
-                            if (row1[3] == "index"):
-                                row[1] = object.Index(approx_expiration_date_object)       # Call the Index function to get the expiration date
-                                row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                object.sorter()
-                                writer.writerow(row)
-
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Money Market futures
-                            elif (row1[3] == "money market"):
-                                if (row[0] == "DE0007201535"):                   # Checks for the EONIA futures category
-                                    row[1] = object.EoniaAndEurSecured(row[2], row[3])  # Call the Eonia function to get the expiration date
-                                    row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                    object.sorter()
-                                    writer.writerow(row)
-
-                                elif (row[0] == "DE000A1YD7E8"):                 # Checks for the EUR secured funding futures category
-                                    row[1] = object.EoniaAndEurSecured(row[2, row[3]])  # Call the EurSecured function to get the expiration date
-                                    row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                    object.sorter()
-                                    writer.writerow(row)
-                                else:
-                                    row[1] = object.Euribor(approx_expiration_date_object)   # Call the Euribor function to get the expiration date
-                                    row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                    object.sorter()
-                                    writer.writerow(row)
-
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Single Stock futures
-                            elif (row1[3] == "single stock"):
-                                row[1] = object.SingleStock(approx_expiration_date_object)  # Call the SingleStock function to get the expiration date
-                                row[3] = row[1] - loc_time_stamp_obj             # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                object.sorter()
-                                writer.writerow(row)
-
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Fixed Income futures
-                            elif (row1[3] == "fixed income"):
-                                approx_exp_date_fix_income = row[3] + "." + row[2] + ".10"
-                                approx_exp_date_fix_income_obj = datetime.datetime.strptime(approx_exp_date_fix_income, "%Y.%m.%d")
-                                row[1] = object.FixedIncome(approx_exp_date_fix_income_obj)  # Call the FixedIncome function to get the expiration date
-                                row[3] = row[1] - loc_time_stamp_obj             # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                object.sorter()
-                                writer.writerow(row)
-
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Forex futures
-                            elif (row1[3] == "forex"):
-                                row[1] = object.Forex(approx_expiration_date_object)       # Call the Forex to get the expiration date
-                                row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                object.sorter()
-                                writer.writerow(row)
-
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Index Dividends futures
-                            elif (row1[3] == "dividends index"):
-                                approx_exp_date_div_index = row[3] + ".12" + ".15"
-                                approx_exp_date_div_index_obj = datetime.datetime.strptime(approx_exp_date_div_index, "%Y.%m.%d")
-                                row[1] = object.IndexDividend(approx_exp_date_div_index_obj)  # Call the IndexDividend function to get the expiration date
-                                row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                object.sorter()
-                                writer.writerow(row)
-
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Single Stock Dividends futures
-                            elif (row1[3] == "dividends single stock"):
-                                approx_exp_date_div_index = row[3] + ".12" + ".15"
-                                approx_exp_date_div_index_obj = datetime.datetime.strptime(approx_exp_date_div_index, "%Y.%m.%d")
-                                row[1] = object.SingleStockDividend(approx_exp_date_div_index_obj)  # Call the SingleStockDividend function to get the expiration date
-                                row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                object.sorter()
-                                writer.writerow(row)
-
-                            # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Volatility futures
-                            elif (row1[3] == "volatility"):
-                                row[1] = object.VolatilityVSTOXX(approx_expiration_date_object)  # Call the VolatilityVSTOXX function to get the expiration date
-                                row[3] = row[1] - loc_time_stamp_obj                  # Expiration date - loc_time_stamp = Number of days remaining for the expiration
-                                object.sorter()
-                                writer.writerow(row)
-
+                            o_prodspec = open('product_info.csv', 'r')
+                            reader1 = csv.reader(o_prodspec)
+                            for row1 in reader1:
+                                if (row[0] == row1[0]):                     # To find the instrumentID for the corresponding productID
+                                    row[0] = row1[1]
+                                    break
+                            if (len(row[0]) < 5):                          # Checks if the length of the id is < 5 or not, if yes, No instrument ID for that
+                                o_txtfile.write(row[0] + "\n")               # productID. Hence save that productID in a logfile for the future reference
                             else:
-                                print("There are some different categories which have not been included")
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Index futures
+                                if (row1[3] == "index"):
+                                    row[1] = object.Index(approx_expiration_date_object)       # Call the Index function to get the expiration date
+                                    row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                    object.sorter()
+                                    writer.writerow(row)
 
-                o_prodspec.close()
-                o_file.close()
-                print("Processing of the file No.",count,"has been sucessfully completed")
-            else:
-                print("File No.",count,"is not in the user mentioned data range")
-    except:
-        print("Some error in the try block for the file No.", count,"has occured")
-        pass
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Money Market futures
+                                elif (row1[3] == "money market"):
+                                    if (row[0] == "DE0007201535"):                   # Checks for the EONIA futures category
+                                        row[1] = object.EoniaAndEurSecured(row[2], row[3])  # Call the Eonia function to get the expiration date
+                                        row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                        object.sorter()
+                                        writer.writerow(row)
+
+                                    elif (row[0] == "DE000A1YD7E8"):                 # Checks for the EUR secured funding futures category
+                                        row[1] = object.EoniaAndEurSecured(row[2, row[3]])  # Call the EurSecured function to get the expiration date
+                                        row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                        object.sorter()
+                                        writer.writerow(row)
+                                    else:
+                                        row[1] = object.Euribor(approx_expiration_date_object)   # Call the Euribor function to get the expiration date
+                                        row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                        object.sorter()
+                                        writer.writerow(row)
+
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Single Stock futures
+                                elif (row1[3] == "single stock"):
+                                    row[1] = object.SingleStock(approx_expiration_date_object)  # Call the SingleStock function to get the expiration date
+                                    row[3] = row[1] - loc_time_stamp_obj             # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                    object.sorter()
+                                    writer.writerow(row)
+
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Fixed Income futures
+                                elif (row1[3] == "fixed income"):
+                                    approx_exp_date_fix_income = row[3] + "." + row[2] + ".10"
+                                    approx_exp_date_fix_income_obj = datetime.datetime.strptime(approx_exp_date_fix_income, "%Y.%m.%d")
+                                    row[1] = object.FixedIncome(approx_exp_date_fix_income_obj)  # Call the FixedIncome function to get the expiration date
+                                    row[3] = row[1] - loc_time_stamp_obj             # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                    object.sorter()
+                                    writer.writerow(row)
+
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Forex futures
+                                elif (row1[3] == "forex"):
+                                    row[1] = object.Forex(approx_expiration_date_object)       # Call the Forex to get the expiration date
+                                    row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                    object.sorter()
+                                    writer.writerow(row)
+
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Index Dividends futures
+                                elif (row1[3] == "dividends index"):
+                                    approx_exp_date_div_index = row[3] + ".12" + ".15"
+                                    approx_exp_date_div_index_obj = datetime.datetime.strptime(approx_exp_date_div_index, "%Y.%m.%d")
+                                    row[1] = object.IndexDividend(approx_exp_date_div_index_obj)  # Call the IndexDividend function to get the expiration date
+                                    row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                    object.sorter()
+                                    writer.writerow(row)
+
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Single Stock Dividends futures
+                                elif (row1[3] == "dividends single stock"):
+                                    approx_exp_date_div_index = row[3] + ".12" + ".15"
+                                    approx_exp_date_div_index_obj = datetime.datetime.strptime(approx_exp_date_div_index, "%Y.%m.%d")
+                                    row[1] = object.SingleStockDividend(approx_exp_date_div_index_obj)  # Call the SingleStockDividend function to get the expiration date
+                                    row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                    object.sorter()
+                                    writer.writerow(row)
+
+                                # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Volatility futures
+                                elif (row1[3] == "volatility"):
+                                    row[1] = object.VolatilityVSTOXX(approx_expiration_date_object)  # Call the VolatilityVSTOXX function to get the expiration date
+                                    row[3] = row[1] - loc_time_stamp_obj                  # Expiration date - loc_time_stamp = Number of days remaining for the expiration
+                                    object.sorter()
+                                    writer.writerow(row)
+
+                                else:
+                                    print("There are some different categories which have not been included")
+
+                    o_prodspec.close()
+                    o_file.close()
+                    print("Processing of the file No.",count,"has been sucessfully completed")
+                else:
+                    print("File No.",count,"is not in the user mentioned data range")
+        except ():
+            print("Some error in the try block for the file No.", count,"has occured")
+            pass
 
