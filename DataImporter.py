@@ -93,31 +93,17 @@ class Importer:
 
     # Trading holidays
     def trading_holidays(self, dat):
-        from datetime import datetime
-        hol_1 = datetime(2017, 4, 14)
-        hol_2 = datetime(2017, 4, 17)
-        hol_3 = datetime(2017, 5, 1)
-        hol_4 = datetime(2017, 10, 3)
-        hol_5 = datetime(2017, 10, 31)
-        hol_6 = datetime(2017, 12, 25)
-        hol_7 = datetime(2017, 12, 26)
-        if(dat == hol_1):
-            dat = dat - timedelta(1)
-        elif (dat == hol_2):
-            dat = dat - timedelta(4)
-        elif (dat == hol_3):
-            dat = dat - timedelta(3)
-        elif (dat == hol_4):
-            dat = dat - timedelta(3)
-        elif (dat == hol_5):
-            dat = dat - timedelta(4)
-        elif (dat == hol_6):
-            dat = dat - timedelta(1)
-        elif (dat == hol_7):
-            dat = dat - timedelta(1)
-        else:
-            return dat
-        return dat
+        dat_str = dat.strftime("%Y-%m-%d")
+        o_trad_holidays = open('trading_holidays.csv', 'r')
+        reader = csv.reader(o_trad_holidays)
+        for row in reader:
+            if (dat_str == row[0]):
+                break
+        import datetime
+        dat_obj = datetime.datetime.strptime(dat_str, "%Y-%m-%d").date()
+        datetime_obj = datetime.datetime.combine(dat_obj, datetime.time())
+        datetime_obj = datetime_obj - timedelta(int(row[1]))
+        return datetime_obj
 
     #Arranging the data in the particular order and delete the unwanted rows
     def sorter(self):
