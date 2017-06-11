@@ -92,17 +92,17 @@ class Importer:
         return date
 
     # Trading holidays
-    def trading_holidays(self, dat):
-        dat_str = dat.strftime("%Y-%m-%d")
-        o_trad_holidays = open('trading_holidays.csv', 'r')
+        def trading_holidays(self, dat):
+        dat_str = dat.strftime("%Y-%m-%d")                              # convert the date object into a data string   
+        o_trad_holidays = open('trading_holidays.csv', 'r')             # open the trading holidays file in a read mode
         reader = csv.reader(o_trad_holidays)
         for row in reader:
-            if (dat_str == row[0]):
+            if (dat_str == row[0]):                                     # Checks if the date matches with the date in the csv file
                 break
         import datetime
-        dat_obj = datetime.datetime.strptime(dat_str, "%Y-%m-%d").date()
-        datetime_obj = datetime.datetime.combine(dat_obj, datetime.time())
-        datetime_obj = datetime_obj - timedelta(int(row[1]))
+        dat_obj = datetime.datetime.strptime(dat_str, "%Y-%m-%d").date()      # convert the date string into an object  
+        datetime_obj = datetime.datetime.combine(dat_obj, datetime.time())    # convert date object into a datetime object
+        datetime_obj = datetime_obj - timedelta(int(row[1]))                  # To allot the preceding working trading date
         return datetime_obj
 
     #Arranging the data in the particular order and delete the unwanted rows
