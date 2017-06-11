@@ -1,8 +1,6 @@
 from datetime import datetime
 from datetime import date, timedelta
-from threading import Timer
 import os
-import shutil
 import re
 import csv
 
@@ -14,14 +12,14 @@ class Importer:
         self.end_date = end_date
 
     # Expiration date calculation for Index futures
-    def Index(self, dat):
+    def index(self, dat):
         while dat.weekday() != 4:
             dat = dat + timedelta(days=1)
         date = self.trading_holidays(dat)
         return date
 
     # Expiration date calculation for Money Market futures (EURIBOR)
-    def Euribor(self, dat):
+    def euribor(self, dat):
         while (dat.weekday() != 2):
             dat = dat + timedelta(days=1)
         dat = dat - timedelta(days=2)
@@ -29,7 +27,7 @@ class Importer:
         return date
 
     # Expiration date calculation for Money Market futures (Eonia and EUR secured category)
-    def EoniaAndEurSecured(self, month, year):
+    def eoniaAndEurSecured(self, month, year):
         o_eonia = open('EoniaAndEurSecuredExp_Dates.csv', 'r')
         reader = csv.reader(o_eonia)
         for roww in reader:
@@ -40,42 +38,42 @@ class Importer:
         return dat_obj
 
     # Expiration date calculation for FixedIncome futures
-    def FixedIncome(self, dat):
+    def fixedIncome(self, dat):
         while dat.weekday() >= 5:
             dat = dat + timedelta(days=1)
         date = self.trading_holidays(dat)
         return date
 
     # Expiration date calculation for Single stock futures
-    def SingleStock(self, dat):
+    def singleStock(self, dat):
         while dat.weekday() != 4:
             dat = dat + timedelta(days=1)
         date = self.trading_holidays(dat)
         return date
 
     # Expiration date calculation for Forex futures
-    def Forex(self, dat):
+    def forex(self, dat):
         while dat.weekday() != 2:
             dat = dat + timedelta(days=1)
         date = self.trading_holidays(dat)
         return date
 
     # Expiration date calculation for Index Dividends futures
-    def IndexDividend(self, dat):
+    def indexDividend(self, dat):
         while dat.weekday() != 4:
             dat = dat + timedelta(days=1)
         date = self.trading_holidays(dat)
         return date
 
     # Expiration date calculation for Single Stock Dividends futures
-    def SingleStockDividend(self, dat):
+    def singleStockDividend(self, dat):
         while dat.weekday() != 4:
             dat = dat + timedelta(days=1)
         date = self.trading_holidays(dat)
         return date
 
     # Expiration date calculation for Volatility futures (VSTOXX)
-    def VolatilityVSTOXX(self, dat):
+    def volatilityVSTOXX(self, dat):
         while dat.weekday() != 4:
             dat = dat + timedelta(days=1)
         dat = dat - timedelta(days=30)
@@ -85,14 +83,14 @@ class Importer:
         return date
 
     # Expiration date calculation for Volatility futures (Variance)
-    def VolatilityVariance(self, c, d):
+    def volatilityVariance(self, c, d):
         while dat.weekday() != 4:
             dat = dat + timedelta(days=1)
         date = self.trading_holidays(dat)
         return date
 
     # Trading holidays
-        def trading_holidays(self, dat):
+    def trading_holidays(self, dat):
         dat_str = dat.strftime("%Y-%m-%d")                              # convert the date object into a data string   
         o_trad_holidays = open('trading_holidays.csv', 'r')             # open the trading holidays file in a read mode
         reader = csv.reader(o_trad_holidays)
@@ -168,7 +166,7 @@ for root, dirs, files in os.walk(src):
                             else:
                                 # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Index futures
                                 if (row1[3] == "index"):
-                                    row[1] = object.Index(approx_expiration_date_object)       # Call the Index function to get the expiration date
+                                    row[1] = object.index(approx_expiration_date_object)       # Call the Index function to get the expiration date
                                     row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                     object.sorter()
                                     writer.writerow(row)
@@ -176,25 +174,25 @@ for root, dirs, files in os.walk(src):
                                 # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Money Market futures
                                 elif (row1[3] == "money market"):
                                     if (row[0] == "DE0007201535"):                   # Checks for the EONIA futures category
-                                        row[1] = object.EoniaAndEurSecured(row[2], row[3])  # Call the Eonia function to get the expiration date
+                                        row[1] = object.eoniaAndEurSecured(row[2], row[3])  # Call the Eonia function to get the expiration date
                                         row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                         object.sorter()
                                         writer.writerow(row)
 
                                     elif (row[0] == "DE000A1YD7E8"):                 # Checks for the EUR secured funding futures category
-                                        row[1] = object.EoniaAndEurSecured(row[2, row[3]])  # Call the EurSecured function to get the expiration date
+                                        row[1] = object.eoniaAndEurSecured(row[2, row[3]])  # Call the EurSecured function to get the expiration date
                                         row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                         object.sorter()
                                         writer.writerow(row)
                                     else:
-                                        row[1] = object.Euribor(approx_expiration_date_object)   # Call the Euribor function to get the expiration date
+                                        row[1] = object.euribor(approx_expiration_date_object)   # Call the Euribor function to get the expiration date
                                         row[3] = row[1] - loc_time_stamp_obj         # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                         object.sorter()
                                         writer.writerow(row)
 
                                 # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Single Stock futures
                                 elif (row1[3] == "single stock"):
-                                    row[1] = object.SingleStock(approx_expiration_date_object)  # Call the SingleStock function to get the expiration date
+                                    row[1] = object.singleStock(approx_expiration_date_object)  # Call the SingleStock function to get the expiration date
                                     row[3] = row[1] - loc_time_stamp_obj             # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                     object.sorter()
                                     writer.writerow(row)
@@ -203,14 +201,14 @@ for root, dirs, files in os.walk(src):
                                 elif (row1[3] == "fixed income"):
                                     approx_exp_date_fix_income = row[3] + "." + row[2] + ".10"
                                     approx_exp_date_fix_income_obj = datetime.datetime.strptime(approx_exp_date_fix_income, "%Y.%m.%d")
-                                    row[1] = object.FixedIncome(approx_exp_date_fix_income_obj)  # Call the FixedIncome function to get the expiration date
+                                    row[1] = object.fixedIncome(approx_exp_date_fix_income_obj)  # Call the FixedIncome function to get the expiration date
                                     row[3] = row[1] - loc_time_stamp_obj             # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                     object.sorter()
                                     writer.writerow(row)
 
                                 # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Forex futures
                                 elif (row1[3] == "forex"):
-                                    row[1] = object.Forex(approx_expiration_date_object)       # Call the Forex to get the expiration date
+                                    row[1] = object.forex(approx_expiration_date_object)       # Call the Forex to get the expiration date
                                     row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                     object.sorter()
                                     writer.writerow(row)
@@ -219,7 +217,7 @@ for root, dirs, files in os.walk(src):
                                 elif (row1[3] == "dividends index"):
                                     approx_exp_date_div_index = row[3] + ".12" + ".15"
                                     approx_exp_date_div_index_obj = datetime.datetime.strptime(approx_exp_date_div_index, "%Y.%m.%d")
-                                    row[1] = object.IndexDividend(approx_exp_date_div_index_obj)  # Call the IndexDividend function to get the expiration date
+                                    row[1] = object.indexDividend(approx_exp_date_div_index_obj)  # Call the IndexDividend function to get the expiration date
                                     row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                     object.sorter()
                                     writer.writerow(row)
@@ -228,14 +226,14 @@ for root, dirs, files in os.walk(src):
                                 elif (row1[3] == "dividends single stock"):
                                     approx_exp_date_div_index = row[3] + ".12" + ".15"
                                     approx_exp_date_div_index_obj = datetime.datetime.strptime(approx_exp_date_div_index, "%Y.%m.%d")
-                                    row[1] = object.SingleStockDividend(approx_exp_date_div_index_obj)  # Call the SingleStockDividend function to get the expiration date
+                                    row[1] = object.singleStockDividend(approx_exp_date_div_index_obj)  # Call the SingleStockDividend function to get the expiration date
                                     row[3] = row[1] - loc_time_stamp_obj            # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                     object.sorter()
                                     writer.writerow(row)
 
                                 # writing the required data(I_ID, Exp_date, timestamp, Days_to_maturity, price, volume) by deleting the unwanted rows for the Volatility futures
                                 elif (row1[3] == "volatility"):
-                                    row[1] = object.VolatilityVSTOXX(approx_expiration_date_object)  # Call the VolatilityVSTOXX function to get the expiration date
+                                    row[1] = object.volatilityVSTOXX(approx_expiration_date_object)  # Call the VolatilityVSTOXX function to get the expiration date
                                     row[3] = row[1] - loc_time_stamp_obj                  # Expiration date - loc_time_stamp = Number of days remaining for the expiration
                                     object.sorter()
                                     writer.writerow(row)
