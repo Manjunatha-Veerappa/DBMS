@@ -123,6 +123,8 @@ writer.writerow(['Instrument_ID', 'Expiration_Date', 'loc_time_stamp', 'days_to_
 
 o_txtfile = open("logfile.txt",'w')                      # logfile to store the productID's where instrumentID is not defined in the prod_info.csv file
 
+o_unknown_cat = open("unknownCategoryFile.txt",'w')      # unknownCategoryFile to store the instrument ID if the category is not defined in the above class
+
 object = Importer(init_date, finl_date)
 count=0
 for root, dirs, files in os.walk(src):
@@ -239,6 +241,7 @@ for root, dirs, files in os.walk(src):
                                     writer.writerow(row)
 
                                 else:
+				    o_unknown_cat.write(row[0] + "\n")                     # Store the instrument ID for the future reference
                                     print("There are some different categories which have not been included")
 
                     o_prodspec.close()
