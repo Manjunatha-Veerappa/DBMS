@@ -3,6 +3,8 @@ from datetime import date, timedelta
 import os
 import re
 import csv
+import zipfile
+import shutil
 
 class Importer:
     row=[]
@@ -111,7 +113,10 @@ class Importer:
         del row[6:20]
 
 #Main starts from here
-src = "E:\Importer"                                    # Source Path
+src = "E:\Importer"                                    # Main source Path
+dst_data = 'E:\Files'                                  # A path to store the data folder unzipped from the zip file.
+dst_csv_files = "E:\csv_files"                         # A path to store all the csv files unzipped from the zip files present in the data folder
+
 init_date = date(2016, 1, 10)                          # To be chosen by the user (year, month, day)
 finl_date = date(2017, 2, 2)                           # To be chosen by the user (year, month, day)
 
@@ -125,7 +130,23 @@ o_unknown_cat = open("unknownCategoryFile.txt",'w')      # unknownCategoryFile t
 
 object = Importer(init_date, finl_date)
 
+# To unzip the main zipped file (also the sub zipped files residing in the main zipped file).
 for root, dirs, files in os.walk(src):
+    print("Unzipping all the files one by one present in the source path........... \n")
+    for file1 in files:
+        print ("Unzipping the main zipped file:", file1)
+        zip = zipfile.ZipFile(src + "\\" + file1)
+        zip.extractall(r'E:\Files')
+        for root, dirs, files in os.walk(dst_data):
+            for file2 in files:
+                source2 = os.path.join(root, file2)
+                print("Unzipping the sub zipped file:", source2)
+                zip = zipfile.ZipFile(source2)
+                zip.extractall(r'E:\csv_files')
+print("\n")
+
+for root, dirs, files in os.walk(dst_csv_files):
+    print ("Data processing has been started............ \n")
     for file in files:
         source = os.path.join(root,file)
         print (source)
@@ -248,4 +269,6 @@ for root, dirs, files in os.walk(src):
         except ():
             print("Some error in the try block for the file", source,"has occured")
             pass
+
+shutil.rmtree(dst_csv_files)                 # To completely remove the csv_files directory
 
