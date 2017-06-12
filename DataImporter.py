@@ -124,21 +124,19 @@ o_txtfile = open("logfile.txt",'w')                      # logfile to store the 
 o_unknown_cat = open("unknownCategoryFile.txt",'w')      # unknownCategoryFile to store the instrument ID if the category is not defined in the above class
 
 object = Importer(init_date, finl_date)
-count=0
+
 for root, dirs, files in os.walk(src):
     for file in files:
         source = os.path.join(root,file)
-        date_search = re.search("([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})", source)
         print (source)
-        date_search = re.search("([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})", source)  # Search for the datestring of the format DD-MM-YYYY in the name of a file/folder
+        numbers = re.findall(r'\d+', source)                           # Search for the 8 digits in the filename and store it in the numbers list
+        num_string = numbers[0]                                        # Parse the string from the numbers list
+        date_str = (num_string[0:4] + "." + num_string[4:6] + "." + num_string[6:8]) # Arrange the string to the format yyyy.mm.dd
         try:
-            print(date_search)
-            date_str = date_search.group(0)
             print(date_str)
             import datetime
-            # date_format = datetime.datetime.strptime(date_str, "%d.%m.%Y").strftime('%d-%m-%Y') # convert the date string into a format YYYY.MM.DD
             date_obj = datetime.datetime.strptime(date_str, "%Y.%m.%d").date()      # convert the date string into an object
-            count += 1
+ 
             if (date_obj):
                 if(date_obj >= object.begin_date and date_obj <= object.end_date):  # compare the extracted date with the specified data range
                     o_file = open(source, 'r')
@@ -244,10 +242,10 @@ for root, dirs, files in os.walk(src):
 
                     o_prodspec.close()
                     o_file.close()
-                    print("Processing of the file No.",count,"has been sucessfully completed")
+                    print("Processing of the file",source,"has been sucessfully completed")
                 else:
-                    print("File No.",count,"is not in the user mentioned data range")
+                    print("File",source,"is not in the user mentioned data range")
         except ():
-            print("Some error in the try block for the file No.", count,"has occured")
+            print("Some error in the try block for the file", source,"has occured")
             pass
 
