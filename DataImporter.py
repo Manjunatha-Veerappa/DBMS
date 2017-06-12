@@ -136,13 +136,13 @@ for root, dirs, files in os.walk(src):
     for file1 in files:
         print ("Unzipping the main zipped file:", file1)
         zip = zipfile.ZipFile(src + "\\" + file1)
-        zip.extractall(r'E:\Files')
+        zip.extractall(dst_data)
         for root, dirs, files in os.walk(dst_data):
             for file2 in files:
                 source2 = os.path.join(root, file2)
                 print("Unzipping the sub zipped file:", source2)
                 zip = zipfile.ZipFile(source2)
-                zip.extractall(r'E:\csv_files')
+                zip.extractall(dst_csv_files)
 print("\n")
 
 for root, dirs, files in os.walk(dst_csv_files):
